@@ -1,0 +1,7 @@
+@PACKAGE_INIT@
+include(CMakeFindDependencyMacro)
+if(NOT TARGET Akreon::Linalg)
+  find_dependency(AkreonLinalg 0.1 CONFIG)
+endif()
+include("${CMAKE_CURRENT_LIST_DIR}/AkreonDynamicsTargets.cmake")
+check_required_components(AkreonDynamics)
